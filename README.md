@@ -1,0 +1,2 @@
+# Linha-digitavel
+Linha Digitavel
