@@ -1,5 +1,6 @@
 $(document).ready(function () {
    $("#valor").mask('000.000.000.000.000,00', {reverse: true});
+    new ClipboardJS('#button-addon2');
 });
 
 /**
@@ -139,6 +140,3 @@ $('#executar').on('click', function(){
     renderLinhaDigitavel(linhaDigitavel);
 });
 
-(function(){
-    new Clipboard('#button-addon2');
-})();
