@@ -3,45 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <section>
     <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand mb-0 h1">Navbar</span>
+        <span class="navbar-brand mb-0 h1">Linha Digitavel</span>
     </nav>
 </section>
 <div class="container">
-    <div class="row">
-        <div class="col-12">
-            <div class="mt-5">
-                <input type="text" class="form-control is-invalid" id="valor" placeholder="Valor" required>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col col-sm-10">
+                <div class="mt-5">
+                    <input type="text" class="form-control" id="valor" placeholder="Valor"  maxlength="9" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-sm-10">
+                <div class="mt-5">
+                    <button type="button" class="btn btn-primary btn-lg btn-block" id="executar">Executar</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col col-sm-10">
+                <div class="mt-5">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Linha digitavel"
+                               aria-label="Recipient's username" aria-describedby="button-addon2" id="linha">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-info clipboard" type="button" id="button-addon2" data-clipboard-target="#linha">Copiar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-12">
-            <div class="mt-5">
-                <button type="button" class="btn btn-primary btn-lg btn-block" id="executar">Executar</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-12">
-            <div class="mt-5">
-                <input id="linha" type="text" class="form-control" placeholder="Linha digitavel" disabled>
-            </div>
-        </div>
-    </div>
-
-
-
 </div>
 <script src="jquery-3.3.1.min.js"></script>
-<script src="inputmask.js"></script>
 <script src="index.js"></script>
+<script src="jquery.mask.js"></script>
+<script src="clipboard.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
 </body>
 </html>

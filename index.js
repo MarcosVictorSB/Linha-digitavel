@@ -1,3 +1,7 @@
+$(document).ready(function () {
+   $("#valor").mask('000.000.000.000.000,00', {reverse: true});
+});
+
 /**
  * @return {boolean}
  */
@@ -16,8 +20,6 @@ function CalculaCodigoBarras(linhaDigitavel) {
         blocos.push(barra.substr(12, 12));
         blocos.push(barra.substr(24, 12));
         blocos.push(barra.substr(36, 12));
-
-        console.log(blocos);
 
         var isModulo10 = ['6', '7'].indexOf(barra[2]) !== -1;
         if (isModulo10) {
@@ -123,9 +125,12 @@ function renderLinhaDigitavel(linhaDigitavel){
     inputLinhaDigitavel.val(linhaDigitavel);
 }
 
-
 $('#executar').on('click', function(){
     var valor =  $('#valor').val();
+
+    valor = valor.replace(".", "");
+    valor = valor.replace(",", "");
+    console.log(valor);
 
     valor = completarValor(valor);
 
@@ -134,3 +139,6 @@ $('#executar').on('click', function(){
     renderLinhaDigitavel(linhaDigitavel);
 });
 
+(function(){
+    new Clipboard('#button-addon2');
+})();
