@@ -141,6 +141,6 @@ $('#executar').on('click', function(){
     $('.alerta').toggle();
     setTimeout(function() {
         $('.alerta').toggle();
-    }, 2000);
+    }, 1500);
 });
 
