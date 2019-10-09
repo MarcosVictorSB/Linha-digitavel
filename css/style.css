@@ -10,3 +10,48 @@
     display: none;
     position: absolute;
 }
+nav a {
+    text-decoration: none;
+    color: black;
+}
+nav a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+nav span i{
+    font-size: 40px;
+    padding-right: 5px;
+}
+
+.nav-link{
+}
+
+.nav-link:hover{
+    background-color: #EAEAEC;
+}
+
+.tipo-compromisso{
+    text-decoration: none;
+    color: black;
+}
+
+.tipo-compromisso:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.button-addon2{
+    border-color: #eeeeee !important;
+}
+
+.button-addon2:hover{
+    background-color: black;
+}
+
+.head-text-table{
+    color: #0067ab;
+}
+#titulos-cards{
+    background-color:#0067ab !important;
+}
