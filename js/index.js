@@ -138,5 +138,9 @@ $('#executar').on('click', function(){
     const linhaDigitavel = formarLinhaDigitavel(valor);
 
     renderLinhaDigitavel(linhaDigitavel);
+    $('.alerta').toggle();
+    setTimeout(function() {
+        $('.alerta').toggle();
+    }, 2000);
 });
 
