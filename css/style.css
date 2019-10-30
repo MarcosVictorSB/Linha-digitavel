@@ -55,3 +55,7 @@ nav span i{
 #titulos-cards{
     background-color:#0067ab !important;
 }
+
+.conteudo-principal{
+    margin: 120px auto;
+}
