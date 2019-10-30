@@ -2,10 +2,6 @@
     margin: 0 auto;
 }
 
-.wrapper{
-    margin-top: 10% ;
-}
-
 .alerta{
     display: none;
     position: absolute;
