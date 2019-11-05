@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="shortcut icon" href="img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-
     <link rel="stylesheet" href="css/frame-table/demo.css">
     <link rel="stylesheet" href="css/frame-table/material-dashboard.css">
     <link rel="stylesheet" href="css/frame-table/material-dashboard-rtl.css">
-
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 <section>
@@ -26,17 +26,23 @@
         </nav>
     </header>
 
-    <div class="alerta col-md-3 offset-9 mt-2">
+    <div id="gerado" class="alerta col-md-3 offset-9 mt-2">
         <div class="alert alert-success" role="alert">
-            A linha digitavel foi gerada.
+            A linha digitavel foi GERADA.
         </div>
     </div>
+
+    <div id="copiado" class="alerta col-md-3 offset-9 mt-2">
+        <div class="alert alert-info" role="alert">
+            A linha digitavel foi COPIADA
+        </div>
+    </div>
+
 </section>
 
-<section class="container conteudo-principal">
+<section class="container">
 
-
-
+    <div class="conteudo-principal">
         <div class="row">
             <div class="col col-sm-10">
                 <div class="">
@@ -58,18 +64,28 @@
             <div class="col col-sm-10">
                 <div class="mt-5">
                     <div class="input-group mb-3">
+
                         <input type="text" class="form-control" placeholder="Linha digitavel"
-                               aria-label="Recipient's username" aria-describedby="button-addon2" id="linha">
+                               aria-label="Recipient's username" aria-describedby="button-addon2"
+                               id="linha" data-toggle="tooltip" data-placement="bottom" >
+
+
                         <div class="input-group-append">
-                            <button class="btn btn-outline-info clipboard" type="button" id="button-addon2" data-clipboard-target="#linha">Copiar</button>
+                            <button class="btn btn-outline-info clipboard" type="button" id="button-addon2"
+                                    data-clipboard-target="#linha">Copiar
+                            </button>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
 </section>
 <script src="js/clipboard.min.js"></script>
 <script src="js/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="js/jquery.mask.js"></script>
 <script src="js/index.js"></script>
 

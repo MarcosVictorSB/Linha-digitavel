@@ -2,10 +2,12 @@
     margin: 0 auto;
 }
 
-.alerta{
+#gerado, #copiado{
     display: none;
     position: absolute;
 }
+
+
 nav a {
     text-decoration: none;
     color: black;
@@ -54,4 +56,8 @@ nav span i{
 
 .conteudo-principal{
     margin: 120px auto;
+}
+
+.conteudo-principal .row{
+    justify-content: center;
 }

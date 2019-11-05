@@ -1,6 +1,9 @@
 $(document).ready(function () {
+   /*Mascara de moeda*/
    $("#valor").mask('000.000.000,00', {reverse: true});
-    new ClipboardJS('#button-addon2');
+
+   /* Instanciando o CLIPBOARDO */
+   new ClipboardJS('#button-addon2');
 });
 
 /**
@@ -126,21 +129,43 @@ function renderLinhaDigitavel(linhaDigitavel){
     inputLinhaDigitavel.val(linhaDigitavel);
 }
 
+function alertaMensagemLinhaDigitabel(){
+    $('#gerado').toggle();
+    setTimeout(function() {
+        $('#gerado').toggle();
+    }, 1500);
+}
+
+
+function alertaMensagemCopiado(){
+    $('#copiado').toggle();
+    setTimeout(function() {
+        $('#copiado').toggle();
+    }, 1500);
+}
+
+
 $('#executar').on('click', function(){
     var valor =  $('#valor').val();
 
-    valor = valor.replace(".", "");
-    valor = valor.replace(",", "");
-    console.log(valor);
+    /*remover as virulas*/
+    valor = valor.replace(/,/g, '');
 
+    /*remover os pontos*/
+    valor = valor.replace(/./g, '');
+
+    console.log(valor);
     valor = completarValor(valor);
+    console.log(valor);
 
     const linhaDigitavel = formarLinhaDigitavel(valor);
 
     renderLinhaDigitavel(linhaDigitavel);
-    $('.alerta').toggle();
-    setTimeout(function() {
-        $('.alerta').toggle();
-    }, 1500);
+
+    alertaMensagemLinhaDigitabel();
 });
 
+
+$('#button-addon2').on('click', function () {
+   alertaMensagemCopiado();
+});
