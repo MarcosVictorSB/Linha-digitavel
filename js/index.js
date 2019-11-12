@@ -148,15 +148,14 @@ function alertaMensagemCopiado(){
 $('#executar').on('click', function(){
     var valor =  $('#valor').val();
 
-    /*remover as virulas*/
+    /*remover as virgulas*/
     valor = valor.replace(/,/g, '');
 
     /*remover os pontos*/
-    valor = valor.replace(/./g, '');
+    valor = valor.replace('.', '');
+    valor = valor.replace('.', '');
 
-    console.log(valor);
     valor = completarValor(valor);
-    console.log(valor);
 
     const linhaDigitavel = formarLinhaDigitavel(valor);
 

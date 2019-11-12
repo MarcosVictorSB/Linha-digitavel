@@ -4,13 +4,18 @@
       <w>addon</w>
       <w>alerta</w>
       <w>calcula</w>
+      <w>clipboardo</w>
       <w>completar</w>
       <w>conteudo</w>
       <w>copiada</w>
       <w>copiado</w>
       <w>digitavel</w>
+      <w>instanciando</w>
       <w>linha</w>
       <w>mensagem</w>
+      <w>moeda</w>
+      <w>pontos</w>
+      <w>virgulas</w>
     </words>
   </dictionary>
 </component>
